@@ -1,9 +1,10 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FocusFall Blog</title>
 
     <style>
@@ -31,6 +32,7 @@
         }
 
         /* Header */
+
         header {
             border-bottom: 1px solid #222;
             padding: 20px 0;
@@ -62,6 +64,7 @@
         }
 
         /* Hero */
+
         .hero {
             padding: 90px 0 70px;
             border-bottom: 1px solid #222;
@@ -85,6 +88,7 @@
         }
 
         /* Blog */
+
         .blog {
             padding: 70px 0;
         }
@@ -135,7 +139,15 @@
             font-weight: bold;
         }
 
+        /* Loading / Error */
+
+        .status {
+            color: #777;
+            padding: 20px 0;
+        }
+
         /* About */
+
         .about {
             padding: 70px 0;
             border-top: 1px solid #222;
@@ -155,7 +167,15 @@
             color: #aaa;
         }
 
+        .about-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #b6ff00;
+            font-weight: bold;
+        }
+
         /* Footer */
+
         footer {
             padding: 30px 0;
             color: #666;
@@ -181,7 +201,9 @@
         }
 
         /* Mobile */
+
         @media (max-width: 800px) {
+
             .posts {
                 grid-template-columns: 1fr;
             }
@@ -205,6 +227,7 @@
 <body>
 
 <header>
+
     <div class="container nav">
 
         <a href="index.html" class="logo">
@@ -214,19 +237,21 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="#blog">Blog</a>
-            <a href="#about">About</a>
-
-            <!-- Privacy Policy -->
+            <a href="about.html">About</a>
             <a href="privacy.html">Privacy</a>
         </nav>
 
     </div>
+
 </header>
 
 
 <main>
 
+    <!-- Hero -->
+
     <section class="hero">
+
         <div class="container">
 
             <h1>
@@ -240,69 +265,37 @@
             </p>
 
         </div>
+
     </section>
 
+
+    <!-- Blog -->
 
     <section class="blog" id="blog">
+
         <div class="container">
 
-            <h2 class="section-title">Latest Posts</h2>
+            <h2 class="section-title">
+                Latest Posts
+            </h2>
 
-            <div class="posts">
+            <div class="posts" id="posts">
 
-                <article class="post">
-                    <div class="date">August 28, 2026</div>
-
-                    <h2>Welcome to the FocusFall Blog</h2>
-
-                    <p>
-                        News, development updates, and behind-the-scenes
-                        posts from FocusFall.
-                    </p>
-
-                    <a href="#" class="read-more">
-                        Read more →
-                    </a>
-                </article>
-
-
-                <article class="post">
-                    <div class="date">August 2026</div>
-
-                    <h2>Building Our Next Puzzle Game</h2>
-
-                    <p>
-                        A look at the ideas and design decisions behind
-                        our latest puzzle project.
-                    </p>
-
-                    <a href="#" class="read-more">
-                        Read more →
-                    </a>
-                </article>
-
-
-                <article class="post">
-                    <div class="date">July 2026</div>
-
-                    <h2>Why We Make Puzzle Games</h2>
-
-                    <p>
-                        Small games, simple mechanics, and the satisfaction
-                        of solving one more puzzle.
-                    </p>
-
-                    <a href="#" class="read-more">
-                        Read more →
-                    </a>
-                </article>
+                <div class="status">
+                    Loading posts...
+                </div>
 
             </div>
+
         </div>
+
     </section>
 
 
+    <!-- About -->
+
     <section class="about" id="about">
+
         <div class="container">
 
             <div class="about-content">
@@ -315,15 +308,21 @@
                     puzzles, and satisfying gameplay.
                 </p>
 
+                <a href="about.html" class="about-link">
+                    Learn more about FocusFall →
+                </a>
+
             </div>
 
         </div>
+
     </section>
 
 </main>
 
 
 <footer>
+
     <div class="container">
 
         <div>
@@ -331,12 +330,122 @@
         </div>
 
         <div class="footer-links">
+            <a href="about.html">About</a>
             <a href="privacy.html">Privacy Policy</a>
         </div>
 
     </div>
+
 </footer>
+
+
+<script>
+
+    async function loadPosts() {
+
+        const postsContainer = document.getElementById("posts");
+
+        try {
+
+            const response = await fetch("posts.json");
+
+            if (!response.ok) {
+                throw new Error("Could not load posts.json");
+            }
+
+            const posts = await response.json();
+
+            // Sort newest first
+            posts.sort(function(a, b) {
+                return new Date(b.date) - new Date(a.date);
+            });
+
+            // Clear loading message
+            postsContainer.innerHTML = "";
+
+            // Show posts
+            posts.forEach(function(post) {
+
+                const article = document.createElement("article");
+
+                article.className = "post";
+
+                article.innerHTML = `
+                    <div class="date">
+                        ${formatDate(post.date)}
+                    </div>
+
+                    <h2>
+                        ${escapeHTML(post.title)}
+                    </h2>
+
+                    <p>
+                        ${escapeHTML(post.description)}
+                    </p>
+
+                    <a href="${escapeAttribute(post.url)}"
+                       class="read-more">
+                        Read more →
+                    </a>
+                `;
+
+                postsContainer.appendChild(article);
+
+            });
+
+        } catch (error) {
+
+            console.error(error);
+
+            postsContainer.innerHTML = `
+                <div class="status">
+                    Unable to load posts.
+                </div>
+            `;
+
+        }
+
+    }
+
+
+    function formatDate(dateString) {
+
+        const date = new Date(dateString + "T00:00:00");
+
+        return date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+
+    }
+
+
+    function escapeHTML(value) {
+
+        const div = document.createElement("div");
+
+        div.textContent = value;
+
+        return div.innerHTML;
+
+    }
+
+
+    function escapeAttribute(value) {
+
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/"/g, "&quot;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+
+    }
+
+
+    loadPosts();
+
+</script>
 
 </body>
 </html>
-```
