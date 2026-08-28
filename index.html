@@ -1,0 +1,297 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFall Blog</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 1px solid #222;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #b6ff00;
+        }
+
+        nav a {
+            margin-left: 25px;
+            color: #aaa;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #b6ff00;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 90px 0 70px;
+            border-bottom: 1px solid #222;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 80px);
+            line-height: 1;
+            max-width: 800px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #b6ff00;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 18px;
+            max-width: 650px;
+        }
+
+        /* Blog */
+        .blog {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .posts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .post {
+            border: 1px solid #292929;
+            padding: 25px;
+            background: #080808;
+            transition: 0.2s;
+        }
+
+        .post:hover {
+            border-color: #b6ff00;
+            transform: translateY(-4px);
+        }
+
+        .date {
+            color: #b6ff00;
+            font-size: 13px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post h2 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .post p {
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: #b6ff00;
+            font-weight: bold;
+        }
+
+        /* About */
+        .about {
+            padding: 70px 0;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+
+        .about-content {
+            max-width: 700px;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #aaa;
+        }
+
+        /* Footer */
+        footer {
+            padding: 30px 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #b6ff00;
+        }
+
+        /* Mobile */
+        @media (max-width: 800px) {
+            .posts {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a href="#" class="logo">FOCUS<span>FALL</span></a>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#blog">Blog</a>
+            <a href="#about">About</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Games made for<br>
+                <span>focus.</span>
+            </h1>
+
+            <p>
+                Welcome to the FocusFall blog. Follow development,
+                discover new games, and read about the ideas behind them.
+            </p>
+        </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <div class="container">
+
+            <h2 class="section-title">Latest Posts</h2>
+
+            <div class="posts">
+
+                <article class="post">
+                    <div class="date">August 28, 2026</div>
+
+                    <h2>Welcome to the FocusFall Blog</h2>
+
+                    <p>
+                        News, development updates, and behind-the-scenes
+                        posts from FocusFall.
+                    </p>
+
+                    <a href="#" class="read-more">Read more →</a>
+                </article>
+
+                <article class="post">
+                    <div class="date">August 2026</div>
+
+                    <h2>Building Our Next Puzzle Game</h2>
+
+                    <p>
+                        A look at the ideas and design decisions behind
+                        our latest puzzle project.
+                    </p>
+
+                    <a href="#" class="read-more">Read more →</a>
+                </article>
+
+                <article class="post">
+                    <div class="date">July 2026</div>
+
+                    <h2>Why We Make Puzzle Games</h2>
+
+                    <p>
+                        Small games, simple mechanics, and the satisfaction
+                        of solving one more puzzle.
+                    </p>
+
+                    <a href="#" class="read-more">Read more →</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+
+                <h2>About FocusFall</h2>
+
+                <p>
+                    FocusFall is an independent game studio creating
+                    simple and engaging games designed around focus,
+                    puzzles, and satisfying gameplay.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 <span>FocusFall</span>. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
+```
