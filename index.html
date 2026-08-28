@@ -25,15 +25,15 @@
             text-decoration: none;
         }
 
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
         /* Header */
         header {
             border-bottom: 1px solid #222;
             padding: 20px 0;
-        }
-
-        .container {
-            width: min(1100px, 90%);
-            margin: auto;
         }
 
         .nav {
@@ -166,6 +166,20 @@
             color: #b6ff00;
         }
 
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #888;
+            margin-right: 20px;
+            transition: 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #b6ff00;
+        }
+
         /* Mobile */
         @media (max-width: 800px) {
             .posts {
@@ -192,20 +206,29 @@
 
 <header>
     <div class="container nav">
-        <a href="#" class="logo">FOCUS<span>FALL</span></a>
+
+        <a href="index.html" class="logo">
+            FOCUS<span>FALL</span>
+        </a>
 
         <nav>
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <a href="#blog">Blog</a>
             <a href="#about">About</a>
+
+            <!-- Privacy Policy -->
+            <a href="privacy.html">Privacy</a>
         </nav>
+
     </div>
 </header>
+
 
 <main>
 
     <section class="hero">
         <div class="container">
+
             <h1>
                 Games made for<br>
                 <span>focus.</span>
@@ -215,8 +238,10 @@
                 Welcome to the FocusFall blog. Follow development,
                 discover new games, and read about the ideas behind them.
             </p>
+
         </div>
     </section>
+
 
     <section class="blog" id="blog">
         <div class="container">
@@ -235,8 +260,11 @@
                         posts from FocusFall.
                     </p>
 
-                    <a href="#" class="read-more">Read more →</a>
+                    <a href="#" class="read-more">
+                        Read more →
+                    </a>
                 </article>
+
 
                 <article class="post">
                     <div class="date">August 2026</div>
@@ -248,8 +276,11 @@
                         our latest puzzle project.
                     </p>
 
-                    <a href="#" class="read-more">Read more →</a>
+                    <a href="#" class="read-more">
+                        Read more →
+                    </a>
                 </article>
+
 
                 <article class="post">
                     <div class="date">July 2026</div>
@@ -261,15 +292,19 @@
                         of solving one more puzzle.
                     </p>
 
-                    <a href="#" class="read-more">Read more →</a>
+                    <a href="#" class="read-more">
+                        Read more →
+                    </a>
                 </article>
 
             </div>
         </div>
     </section>
 
+
     <section class="about" id="about">
         <div class="container">
+
             <div class="about-content">
 
                 <h2>About FocusFall</h2>
@@ -281,14 +316,24 @@
                 </p>
 
             </div>
+
         </div>
     </section>
 
 </main>
 
+
 <footer>
     <div class="container">
-        © 2026 <span>FocusFall</span>. All rights reserved.
+
+        <div>
+            © 2026 <span>FocusFall</span>. All rights reserved.
+        </div>
+
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+
     </div>
 </footer>
 
