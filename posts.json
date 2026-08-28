@@ -2,21 +2,21 @@
 [
     {
         "title": "Welcome to the FocusFall Blog",
-        "date": "2026-08-28",
+        "date": "2026-08-15",
         "description": "News, development updates, and behind-the-scenes posts from FocusFall.",
         "url": "posts/welcome.html"
     },
     {
-        "title": "Building Our Next Puzzle Game",
-        "date": "2026-08-20",
-        "description": "A look at the ideas and design decisions behind our latest puzzle project.",
-        "url": "posts/puzzle-game.html"
-    },
-    {
         "title": "Why We Make Puzzle Games",
-        "date": "2026-07-20",
+        "date": "2026-08-15",
         "description": "Small games, simple mechanics, and the satisfaction of solving one more puzzle.",
         "url": "posts/why-puzzle-games.html"
+    },
+    {
+    "title": "Introducing Crossword Insanity",
+    "date": "2026-08-28",
+    "description": "Introducing Crossword Insanity, a crossword puzzle game from FocusFall.",
+    "url": "posts/crossword-insanity.html"
     }
 ]
 
