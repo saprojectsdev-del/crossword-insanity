@@ -1,1 +1,354 @@
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introducing Crossword Insanity | FocusFall</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(850px, 90%);
+            margin: auto;
+        }
+
+        /* Header */
+
+        header {
+            border-bottom: 1px solid #222;
+            padding: 20px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #b6ff00;
+        }
+
+        nav a {
+            margin-left: 25px;
+            color: #aaa;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #b6ff00;
+        }
+
+        /* Article */
+
+        main {
+            padding: 80px 0 100px;
+        }
+
+        .date {
+            color: #b6ff00;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 35px;
+        }
+
+        h1 span {
+            color: #b6ff00;
+        }
+
+        .article {
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        .article p {
+            margin-bottom: 25px;
+        }
+
+        .article h2 {
+            color: #fff;
+            font-size: 28px;
+            margin: 50px 0 15px;
+        }
+
+        .article strong {
+            color: #fff;
+        }
+
+        .game-info {
+            border: 1px solid #292929;
+            background: #080808;
+            padding: 25px;
+            margin: 35px 0;
+        }
+
+        .game-info p {
+            margin-bottom: 8px;
+        }
+
+        .game-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .game-info strong {
+            color: #b6ff00;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #b6ff00;
+            font-weight: bold;
+        }
+
+        /* Footer */
+
+        footer {
+            border-top: 1px solid #222;
+            padding: 30px 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #b6ff00;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #888;
+            margin-right: 20px;
+            transition: 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #b6ff00;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            main {
+                padding: 55px 0 70px;
+            }
+
+            .article {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="container nav">
+
+        <a href="../index.html" class="logo">
+            FOCUS<span>FALL</span>
+        </a>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#blog">Blog</a>
+            <a href="../about.html">About</a>
+            <a href="../privacy.html">Privacy</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <article class="container">
+
+        <div class="date">
+            August 28, 2026
+        </div>
+
+        <h1>
+            Introducing <span>Crossword Insanity</span>
+        </h1>
+
+        <div class="article">
+
+            <p>
+                We're excited to introduce <strong>Crossword Insanity</strong>,
+                a crossword puzzle game from FocusFall.
+            </p>
+
+            <p>
+                Crossword Insanity is built around a simple idea:
+                solving word puzzles should be easy to pick up, but
+                challenging enough to keep you thinking.
+            </p>
+
+
+            <div class="game-info">
+
+                <p>
+                    <strong>Game:</strong> Crossword Insanity
+                </p>
+
+                <p>
+                    <strong>Genre:</strong> Word Puzzle
+                </p>
+
+                <p>
+                    <strong>Platform:</strong> Android
+                </p>
+
+                    <p>
+                    <strong>Developer:</strong> FocusFall
+                </p>
+
+            </div>
+
+
+            <h2>How It Works</h2>
+
+            <p>
+                Each level presents a crossword puzzle with a set of
+                words to discover. Use the clues and available letters
+                to fill the puzzle and complete the level.
+            </p>
+
+            <p>
+                The puzzles gradually become more challenging as you
+                progress, giving you a reason to keep playing and
+                improve your word-solving skills.
+            </p>
+
+
+            <h2>Designed for Quick Sessions</h2>
+
+            <p>
+                Crossword Insanity is designed to be played whenever
+                you have a few spare minutes.
+            </p>
+
+            <p>
+                You don't need to commit to a long gaming session.
+                Pick up the game, solve a few puzzles, and come back
+                whenever you want.
+            </p>
+
+
+            <h2>Growing Difficulty</h2>
+
+            <p>
+                The game starts with simpler puzzles and gradually
+                introduces more challenging words and combinations.
+            </p>
+
+            <p>
+                The goal is to provide a steady sense of progression
+                without making the game unnecessarily complicated.
+            </p>
+
+
+            <h2>Built by FocusFall</h2>
+
+            <p>
+                Crossword Insanity is developed by FocusFall, an
+                independent one-person game studio.
+            </p>
+
+            <p>
+                The game is part of our goal to create lightweight,
+                accessible games with simple mechanics and satisfying
+                gameplay.
+            </p>
+
+
+            <h2>What's Next?</h2>
+
+            <p>
+                Development doesn't stop when the game is released.
+                We plan to continue improving Crossword Insanity and
+                exploring new ideas for future updates and games.
+            </p>
+
+            <p>
+                We'll share development news and updates here on the
+                FocusFall blog.
+            </p>
+
+
+            <a href="../index.html" class="back">
+                ← Back to Blog
+            </a>
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        © 2026 <span>FocusFall</span>. All rights reserved.
+
+        <div class="footer-links">
+            <a href="../about.html">About</a>
+            <a href="../privacy.html">Privacy Policy</a>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
+```
