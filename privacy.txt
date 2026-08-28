@@ -1,0 +1,49 @@
+# Privacy Policy
+
+**Last updated: August 8, 2026**
+
+FocusFall ("I", "me", or "my") operates **Crossword Insanity**, a mobile game.
+
+This Privacy Policy explains how information may be handled when you use Crossword Insanity.
+
+## Information Collection
+
+Crossword Insanity does not directly collect or store personal information such as your name, email address, phone number, or physical address.
+
+The game may store certain gameplay information locally on your device, such as game progress, settings, and in-game coins. This information is used only to provide the game's features.
+
+## Advertising
+
+Crossword Insanity may display advertisements provided by third-party advertising services.
+
+These advertising providers may automatically collect certain information from your device, such as advertising identifiers, device information, approximate location, and information about ad interactions. This information may be used to provide, measure, and improve advertisements.
+
+The handling of this information is governed by the privacy policies of the relevant advertising providers.
+
+## In-App Purchases
+
+Crossword Insanity may offer optional in-app purchases. Purchases are processed through the relevant app store, such as Google Play.
+
+FocusFall does not directly receive or store your payment card or other payment information.
+
+## Third-Party Services
+
+Crossword Insanity may use third-party services for advertising, analytics, crash reporting, or other functionality.
+
+These services may collect information according to their own privacy policies.
+
+## Children's Privacy
+
+Crossword Insanity is not specifically directed toward children under the age of 13. FocusFall does not knowingly collect personal information from children.
+
+If you believe that a child has provided personal information through the game, please contact me so that appropriate action can be taken.
+
+## Data Security
+
+I take reasonable steps to protect information associated with the game. However, no method of electronic storage or transmission is completely secure.
+
+## Changes to This Privacy Policy
+
+This Privacy Policy may be updated from time to time. Any changes will be posted on this page with an updated "Last updated" date.
+
+
